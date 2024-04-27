@@ -52,7 +52,11 @@
         </div>
         <div class="col-sm-4">
           <label for="">Jenis Produk</label>
-          <input type="text" name="Pilih Produk" class="form-control" placeholder="Pilih Produk">
+          <select name="Jenis_Produk" class="form-control">
+            @for ($i = 0; $i < $jumlahproduk; $i++)
+              <option value="{{ $jenisProduk[$i] }}">{{ $jenisProduk[$i] }}</option>
+            @endfor
+          </select>
         </div>
         <div class="col-sm-6">
           <label for="">Harga</label>
